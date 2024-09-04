@@ -4,7 +4,7 @@
 
 <!-- drawer init and show -->
 <div class="text-center">
-  <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+  <button class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
   Menu
   </button>
 </div>
@@ -65,12 +65,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat Interface</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet">
   <style>
-        body {
-    background-image: url('http://192.168.40.182:8080/farm%2001.jpg'); /* URL da imagem acessível */
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o fundo */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-position: center center; /* Centraliza a imagem */
+      body {
+        background-image: url('http://192.168.40.182:8080/farm%2001.jpg'); /* URL da imagem acessível */
+        background-size: cover; /* Ajusta o tamanho da imagem para cobrir o fundo */
+        background-repeat: no-repeat; /* Evita que a imagem se repita */
+        background-position: center center; /* Centraliza a imagem */
       }
 
       .chat-container {
@@ -78,7 +79,7 @@
           padding: 20px;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: space-between; /* Ajusta o alinhamento para ter espaço igual acima e abaixo */
           height: 100vh;
           margin: 0 auto;
           background-color: rgba(255, 255, 255, 0.8); /* Adiciona um fundo branco semitransparente para melhor contraste */
@@ -88,14 +89,14 @@
           max-width: 70%;
           padding: 10px 15px;
           border-radius: 15px;
-          margin-bottom: 10px;
+          margin-bottom: 60px;
       }
       .message-tanica {
           background-color: #e0e0e0; /* Tom de cinza claro */
           margin-right: auto;
       }
       .message-user {
-          background-color: #007bff;
+          background-color: #3c8d5f;
           color: white;
           margin-left: auto;
       }
@@ -107,6 +108,7 @@
       }
       .form-container {
           margin-top: auto;
+          margin-bottom: 50px; /* Ajuste a margem inferior conforme necessário */
       }
       textarea {
           height: 100px; /* Ajuste para aumentar a altura */
@@ -139,11 +141,27 @@
       <form id="chat-form" class="form-container w-full max-w-3xl mx-auto px-4">
         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Digite sua dúvida aqui</label>
         <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite sua mensagem..."></textarea>
-        <button type="submit" class="mt-2 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Enviar</button>
+        <button type="submit" class="mt-2 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">Enviar</button>
     </form>
   </div>
 
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Simulate Tanica's initial message
+      const tanicaMessage = document.createElement('div');
+      tanicaMessage.className = 'message-container tanica';
+      tanicaMessage.innerHTML = `
+        <img class="w-10 h-10 rounded-full mr-3" src="C:/Users/lucas/OneDrive/Área de Trabalho/Stuff/Programação/Projetos/Python Repository/frontend-html/tanica.jpg" alt="Tanica Image">
+        <div class="message-bubble message-tanica">
+          <p>Posso te ajudar?</p>
+        </div>
+      `;
+      document.getElementById('chat-box').appendChild(tanicaMessage);
+
+      // Scroll to the bottom of chat
+      document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
+    });
+
     document.getElementById('chat-form').addEventListener('submit', function(event) {
       event.preventDefault();
 
