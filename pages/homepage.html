@@ -59,6 +59,7 @@
 </div>
 
 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -124,27 +125,58 @@
 </head>
 <body class="bg-gray-100">
   <div class="chat-container p-4 max-w-4xl mx-auto">
-      <!-- Tanica's Message -->
-      <div class="message-container tanica">
-          <img class="w-10 h-10 rounded-full mr-3" src="C:\Users\lucas\OneDrive\Área de Trabalho\Stuff\Programação\Projetos\Python Repository\frontend-html\tanica.jpg" alt="Tanica Image">
-          <div class="message-bubble message-tanica">
-              <p>Olá, Seja bem-vindo(a), qual sua dúvida?</p>
-          </div>
+      <div id="chat-box" class="overflow-y-auto flex-1">
+          <!-- Messages will be appended here by JavaScript -->
       </div>
-      <!-- User's Message -->
-      <div class="message-container user">
-          <div class="message-bubble message-user">
-              <p>Estou com dúvida sobre...</p>
-          </div>
-          <img class="w-10 h-10 rounded-full ml-3" src="C:\Users\lucas\OneDrive\Área de Trabalho\Stuff\Programação\Projetos\Python Repository\frontend-html\fazendeiro.png" alt="User Image">
-      </div>
-      <!-- Form for New Messages -->
-      <form class="form-container w-full max-w-3xl mx-auto px-4">
+      <form id="chat-form" class="form-container w-full max-w-3xl mx-auto px-4">
         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Digite sua dúvida aqui</label>
         <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite sua mensagem..."></textarea>
         <button type="submit" class="mt-2 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Enviar</button>
     </form>
-    
   </div>
+
+  <script>
+    document.getElementById('chat-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const messageInput = document.getElementById('message');
+      const messageText = messageInput.value.trim();
+      
+      if (messageText === '') return;
+
+      // Add user message to chat
+      const userMessage = document.createElement('div');
+      userMessage.className = 'message-container user';
+      userMessage.innerHTML = `
+        <div class="message-bubble message-user">
+          <p>${messageText}</p>
+        </div>
+        <img class="w-10 h-10 rounded-full ml-3" src="C:/Users/lucas/OneDrive/Área de Trabalho/Stuff/Programação/Projetos/Python Repository/frontend-html/fazendeiro.png" alt="User Image">
+      `;
+      document.getElementById('chat-box').appendChild(userMessage);
+
+      // Clear message input
+      messageInput.value = '';
+
+      // Scroll to the bottom of chat
+      document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
+
+      // Simulate Tanica's response
+      setTimeout(function() {
+        const tanicaMessage = document.createElement('div');
+        tanicaMessage.className = 'message-container tanica';
+        tanicaMessage.innerHTML = `
+          <img class="w-10 h-10 rounded-full mr-3" src="C:/Users/lucas/OneDrive/Área de Trabalho/Stuff/Programação/Projetos/Python Repository/frontend-html/tanica.jpg" alt="Tanica Image">
+          <div class="message-bubble message-tanica">
+            <p>Essa é uma resposta simulada da IA.</p>
+          </div>
+        `;
+        document.getElementById('chat-box').appendChild(tanicaMessage);
+
+        // Scroll to the bottom of chat
+        document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
+      }, 1000); // Delay for simulation
+    });
+  </script>
 </body>
 </html>
