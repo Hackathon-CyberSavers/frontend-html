@@ -58,7 +58,6 @@
   </div>
 </div>
 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -67,6 +66,13 @@
   <title>Chat Interface</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
+        body {
+    background-image: url('http://192.168.40.182:8080/farm%2001.jpg'); /* URL da imagem acessível */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center center; /* Centraliza a imagem */
+      }
+
       .chat-container {
           max-width: 600px;
           padding: 20px;
@@ -75,6 +81,8 @@
           justify-content: center;
           height: 100vh;
           margin: 0 auto;
+          background-color: rgba(255, 255, 255, 0.8); /* Adiciona um fundo branco semitransparente para melhor contraste */
+          border-radius: 10px; /* Adiciona bordas arredondadas para um visual mais agradável */
       }
       .message-bubble {
           max-width: 70%;
@@ -123,7 +131,7 @@
       }
   </style>
 </head>
-<body class="bg-gray-100">
+<body>
   <div class="chat-container p-4 max-w-4xl mx-auto">
       <div id="chat-box" class="overflow-y-auto flex-1">
           <!-- Messages will be appended here by JavaScript -->
