@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Savers | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-green-100">
+    <main class="h-screen flex flex-col m-5 justify-center items-center">
+
+        <div class="justify-self-start text-center"> <!-- Reduzido de mb-12 para mb-6 -->
+            <h1 class="mb-4 text-3xl font-extrabold text-gray-800 md:text-6xl lg:text-8xl">
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Conectando</span>
+                você com o mundo e o mercado da agricultura
+            </h1>
+            <p class="mb-8 text-lg font-normal text-gray-800 lg:text-xl sm:px-16 lg:px-48">
+                Fortalecendo Fazendeiros, Cultivando um Amanhã Global.
+            </p>
+        </div>
+
+        <form class="flex flex-col p-5 max-w-sm w-full mx-auto">
+            <div class="mb-5">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Seu email</label>
+                <input type="email" id="email"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="nome@email.com" required />
+            </div>
+            <div class="mb-5">
+                <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Sua senha</label>
+                <input type="password" id="password"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="******" required />
+            </div>
+
+            <div class="flex flex-col space-y-2">
+                <button type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                    Criar Nova Conta
+                </button>
+                <button type="button"
+                    class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                    Já Possuo Conta
+                </button>
+            </div>
+        </form>
+
+        <div class="fixed bottom-6 right-8 flex items-start gap-2.5 px-3">
+            <img class="w-16 h-16 rounded-full" src="../images/tanica.jpg" alt="Tanica">
+            <div
+                class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 mt-4 bg-green-300 rounded-e-xl rounded-es-xl">
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm font-semibold text-gray-900">Tanica</span>
+                </div>
+                <p class="text-sm font-normal py-2.5 text-gray-900">
+                    Olá, Eu sou a Tanica, a A.I. da Cyber Savers! Vou tirar todas suas dúvidas sobre plantações! Vamos
+                    lá?
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</body>
+
+</html>
