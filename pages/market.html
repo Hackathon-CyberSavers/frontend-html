@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Savers | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Botão de Menu -->
+    <button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation"
+        class="p-2 text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200">
+        <!-- Ícone de três riscos -->
+        <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+
+    <!-- Drawer Off-canvas -->
+    <div id="drawer-navigation"
+        class="fixed top-0 left-0 z-40 w-64 h-screen p-4 transition-transform -translate-x-full bg-white border-r border-gray-200"
+        tabindex="-1" aria-labelledby="drawer-navigation-label">
+        <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase">Menu</h5>
+        <button type="button" data-drawer-hide="drawer-navigation"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center">
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Close menu</span>
+        </button>
+
+        <!-- Menu Items -->
+        <ul class="space-y-2 mt-4">
+            <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path>
+                    </svg>
+                    <span class="ml-3">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span class="ml-3">Add Item</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 12h8m-8 4h8m-8-8h8"></path>
+                    </svg>
+                    <span class="ml-3">Items</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
+                    </svg>
+                    <span class="ml-3">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <body class="bg-gray-100">
+<!-- Seção de Vendendo -->
+<section class="my-16">
+  <h2 class="text-3xl font-semibold text-center mb-6">Vendendo</h2>
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Card 1 -->
+    <div role="status" class="max-w-sm py-4 border border-gray-200 rounded shadow animate-pulse md:p-6 ark:border-gray-700 flex-1">
+   
+    </div>
+    
+    <!-- Card 2 -->
+    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
+      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
+      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
+    </div>
+    
+    <!-- Card 3 -->
+    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
+      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
+      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
+    </div>
+    
+    <!-- Adicionar Anúncio de Venda -->
+    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow flex-1">
+      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+        <!-- SVG de "Adicionar" -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-gray-400 dark:text-gray-500">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+      </div>
+      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-4 mx-auto"></div>
+      <div class="text-center text-gray-500">Adicione seu anúncio de venda aqui</div>
+    </div>
+  </div>
+</section>
+<!-- Seção de Comprando -->
+<section class="my-16">
+  <h2 class="text-3xl font-semibold text-center mb-6">Comprando</h2>
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Card 1 -->
+    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
+      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
+      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
+      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
+      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
+    </div>
+    
+    <!-- Card 3 -->
+    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
+      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
+      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
+    </div>
+    
+    <!-- Adicionar Anúncio de Compra -->
+    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow flex-1">
+      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+        <!-- SVG de "Adicionar" -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-gray-400 dark:text-gray-500">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+      </div>
+      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto"></div>
+      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-4 mx-auto"></div>
+      <div class="text-center text-gray-500">Adicione seu anúncio de compra aqui</div>
+    </div>
+  </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</body>
+
+</html>
