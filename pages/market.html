@@ -4,9 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber Savers | Login</title>
+  <title>Cyber Savers | Mercado</title>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url("../images/FundoMercado02.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Estilo dos botões de copiar com verde escuro */
+    .copy-btn {
+      background-color: #006400;
+      /* Verde escuro */
+      color: white;
+      font-weight: bold;
+    }
+
+    .copy-btn:hover {
+      background-color: #004d00;
+      /* Tom mais escuro ao passar o mouse */
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100">
@@ -96,44 +118,82 @@
     <section class="my-16">
       <h2 class="text-3xl font-semibold text-center mb-6">Vendendo</h2>
       <div class="flex flex-wrap justify-center gap-6">
-        <!-- Card 1 -->
-        <div role="status"
-          class="max-w-sm py-4 border border-gray-200 rounded shadow animate-pulse md:p-6 ark:border-gray-700 flex-1">
-
+        <!-- Card 1 - Algodão -->
+        <div
+          class="max-w-xs w-full p-4 border border-gray-200 rounded-lg shadow-lg flex-1 bg-white hover:shadow-2xl transition-shadow">
+          <img src="../images/milho 01.jpg" alt="Algodão" class="h-64 w-full object-cover mb-4 rounded-lg">
+          <div class="text-center">
+            <p class="font-bold">Algodão</p>
+            <p>Safra: 150 Kg</p>
+            <p>Local: Moçambique</p>
+            <p>Contato: fazendeiro@example.com</p>
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center mt-4"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div role="status"
-          class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-          <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
+        <!-- Card 2 - Batata -->
+        <div
+          class="max-w-xs w-full p-4 border border-gray-200 rounded-lg shadow-lg flex-1 bg-white hover:shadow-2xl transition-shadow">
+          <img src="../images/batata 01.jpg" alt="Batata" class="h-64 w-full object-cover mb-4 rounded-lg">
+          <div class="text-center">
+            <p class="font-bold">Batata Inglesa</p>
+            <p>Safra: 1 Tonelada</p>
+            <p>Local: Brasil</p>
+            <p>Contato: fazendeiro@example.com</p>
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center mt-4"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
         </div>
 
-        <!-- Card 3 -->
-        <div role="status"
-          class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-          <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
+        <!-- Card 3 - Café -->
+        <div
+          class="max-w-xs w-full p-4 border border-gray-200 rounded-lg shadow-lg flex-1 bg-white hover:shadow-2xl transition-shadow">
+          <img src="../images/café 01.jpg" alt="Café" class="h-64 w-full object-cover mb-4 rounded-lg">
+          <div class="text-center">
+            <p class="font-bold">Café</p>
+            <p>Safra: 300 Kg</p>
+            <p>Local: Brasil</p>
+            <p>Contato: fazendeiro@example.com</p>
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center mt-4"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
         </div>
 
         <!-- Adicionar Anúncio de Venda -->
-        <div role="status"
-          class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow flex-1">
-          <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+        <div
+          class="max-w-xs w-full p-4 border border-gray-200 rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow flex-1 bg-white">
+          <div class="flex items-center justify-center h-64 mb-4 bg-gray-300 rounded-lg">
             <!-- SVG de "Adicionar" -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-10 h-10 text-gray-400 dark:text-gray-500">
+              stroke="currentColor" class="w-10 h-10 text-gray-400">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
             </svg>
           </div>
-          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-4 mx-auto"></div>
           <div class="text-center text-gray-500">Adicione seu anúncio de venda aqui</div>
         </div>
       </div>
@@ -142,56 +202,70 @@
     <section class="my-16">
       <h2 class="text-3xl font-semibold text-center mb-6">Comprando</h2>
       <div class="flex flex-wrap justify-center gap-6">
-        <!-- Card 1 -->
-        <div role="status"
-          class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-          <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
+
+        <!-- Card 1 - Comprando Milho -->
+        <div
+          class="w-full max-w-xs p-4 border border-gray-200 rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow">
+          <div class="text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Comprando Milho</h3>
+            <p class="text-gray-600">Local: Estados Unidos</p>
+            <p class="text-gray-600 email">comprador@example.com</p>
+          </div>
+          <div class="mt-4">
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div role="status"
-          class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-          <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
-        </div>
-
-        <!-- Card 3 -->
-        <div role="status"
-          class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-          <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
+        <!-- Card 2 - Comprando Pimenta -->
+        <div
+          class="w-full max-w-xs p-4 border border-gray-200 rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow">
+          <div class="text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Comprando Pimenta</h3>
+            <p class="text-gray-600">Local: Congo - África</p>
+            <p class="text-gray-600 email">comprador2@example.com</p>
+          </div>
+          <div class="mt-4">
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
         </div>
 
         <!-- Adicionar Anúncio de Compra -->
-        <div role="status"
-          class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow flex-1">
-          <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+        <div
+          class="w-full max-w-xs p-4 border border-gray-200 rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow bg-white">
+          <div class="flex items-center justify-center h-32 mb-4 bg-gray-300 rounded-lg">
             <!-- SVG de "Adicionar" -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-10 h-10 text-gray-400 dark:text-gray-500">
+              stroke="currentColor" class="w-8 h-8 text-gray-400">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
             </svg>
           </div>
-          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto"></div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-4 mx-auto"></div>
           <div class="text-center text-gray-500">Adicione seu anúncio de compra aqui</div>
         </div>
+
       </div>
     </section>
-
-    <script src="../javascript/verifyToken.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
   </body>
 
-</html>
+
+  </script>
+  <script src="../javascript/emailcopy.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
