@@ -1,4 +1,4 @@
-document.getElementById('loginForm').addEventListener('submit', function (event) {
+document.getElementById('loginForm').addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const email = document.getElementById('email').value;
@@ -9,27 +9,27 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         password: password
     };
 
-    fetch('http://127.0.0.1:5000/login', {
+    const result = await fetch('https://cybersavers-api.onrender.com/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(loginData)
     })
-        .then(response => {
+        .then(async (response) => {
             if (!response.ok) {
                 throw new Error('Erro ao fazer login');
             }
-            return response.json(); 
+            const data = await response.json()
+            return data;
         })
-        .then(data => {
 
-            localStorage.setItem('token', data.token);
-
-            window.location.href = 'homepage.html';
-        })
         .catch(error => {
             console.error('Erro:', error);
             alert('Erro ao fazer login. Tente novamente.');
         });
+
+    localStorage.setItem('token', result.data.token);
+
+    window.location.href = 'homepage.html';
 });

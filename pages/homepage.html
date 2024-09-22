@@ -82,7 +82,7 @@
                 
             <!-- Colocando o Logout no final -->
             <li class="mt-auto">
-                <a href="login.html"
+                <a href="login.html" onclick="localStorage.clear()"
                     class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
                     <svg class="w-6 h-6 text-green-800 transition duration-75 group-hover:text-gray-900" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -108,50 +108,8 @@
                     class="ml-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2">Enviar</button>
             </form>
         </div>
-        <script>
-            document.getElementById('chat-form').addEventListener('submit', function (event) {
-                event.preventDefault();
 
-                const messageInput = document.getElementById('message');
-                const messageText = messageInput.value.trim();
-
-                if (messageText === '') return;
-
-                // Adiciona mensagem do usuário ao chat
-                const userMessage = document.createElement('div');
-                userMessage.className = 'flex items-start justify-end mb-4';
-                userMessage.innerHTML = `
-                  <div class="bg-green-700 text-white p-3 rounded-lg max-w-md">
-                    <p>${messageText}</p>
-                  </div>
-                  <img class="w-10 h-10 rounded-full ml-3" src="../images/fazendeiro.png" alt="User Image">
-                `;
-                document.getElementById('chat-box').appendChild(userMessage);
-
-                // Limpar campo de mensagem
-                messageInput.value = '';
-
-                // Rolar para o fim do chat
-                document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
-
-                // Simular resposta da Tanica
-                setTimeout(function () {
-                    const tanicaMessage = document.createElement('div');
-                    tanicaMessage.className = 'flex items-start justify-start mb-4';
-                    tanicaMessage.innerHTML = `
-                    <img class="w-10 h-10 rounded-full mr-3" src="../images/tanica.jpg" alt="Tanica Image">
-                    <div class="bg-gray-300 text-gray-900 p-3 rounded-lg max-w-md">
-                      <p>Olá! Como posso te ajudar? Sou a assistente virtual Tanica.</p>
-                    </div>
-                  `;
-                    document.getElementById('chat-box').appendChild(tanicaMessage);
-
-                    // Rolar para o fim do chat
-                    document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
-                }, 1000);
-            });
-        </script>
-
+        <script src="../javascript/chat.js"></script>
         <script src="../javascript/verifyToken.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
