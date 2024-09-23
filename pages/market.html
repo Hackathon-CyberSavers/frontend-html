@@ -2,175 +2,270 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Savers | Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Savers | Mercado</title>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url("../images/FundoMercado02.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Estilo dos botões de copiar com verde escuro */
+    .copy-btn {
+      background-color: #006400;
+      /* Verde escuro */
+      color: white;
+      font-weight: bold;
+    }
+
+    .copy-btn:hover {
+      background-color: #004d00;
+      /* Tom mais escuro ao passar o mouse */
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100">
-    <!-- Botão de Menu -->
-    <button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation"
-        class="p-2 text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200">
-        <!-- Ícone de três riscos -->
-        <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+  <!-- Botão de Menu -->
+  <button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation"
+    class="p-2 text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200">
+    <!-- Ícone de três riscos -->
+    <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+  <!-- Drawer Off-canvas -->
+  <div id="drawer-navigation"
+    class="fixed top-0 left-0 z-40 w-64 h-screen p-4 transition-transform -translate-x-full bg-white border-r border-gray-200"
+    tabindex="-1" aria-labelledby="drawer-navigation-label">
+    <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase">CyberSavers</h5>
+    <button type="button" data-drawer-hide="drawer-navigation"
+      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center">
+      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <span class="sr-only">Close menu</span>
     </button>
 
-    <!-- Drawer Off-canvas -->
-    <div id="drawer-navigation"
-        class="fixed top-0 left-0 z-40 w-64 h-screen p-4 transition-transform -translate-x-full bg-white border-r border-gray-200"
-        tabindex="-1" aria-labelledby="drawer-navigation-label">
-        <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase">Menu</h5>
-        <button type="button" data-drawer-hide="drawer-navigation"
-            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center">
-            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clip-rule="evenodd"></path>
+    <hr class="text-green-800 border-green-800 my-3" />
+
+    <!-- Menu Items -->
+    <ul class="flex flex-col flex-grow">
+
+      <li>
+        <a href="homepage.html"
+          class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+          <svg class="w-6 h-6 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5" />
+          </svg>
+          <span class="ml-3">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="market.html"
+          class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+          <svg class="w-6 h-6 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 12c.263 0 .524-.06.767-.175a2 2 0 0 0 .65-.491c.186-.21.333-.46.433-.734.1-.274.15-.568.15-.864a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 12 9.736a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 16 9.736c0 .295.052.588.152.861s.248.521.434.73a2 2 0 0 0 .649.488 1.809 1.809 0 0 0 1.53 0 2.03 2.03 0 0 0 .65-.488c.185-.209.332-.457.433-.73.1-.273.152-.566.152-.861 0-.974-1.108-3.85-1.618-5.121A.983.983 0 0 0 17.466 4H6.456a.986.986 0 0 0-.93.645C5.045 5.962 4 8.905 4 9.736c.023.59.241 1.148.611 1.567.37.418.865.667 1.389.697Zm0 0c.328 0 .651-.091.94-.266A2.1 2.1 0 0 0 7.66 11h.681a2.1 2.1 0 0 0 .718.734c.29.175.613.266.942.266.328 0 .651-.091.94-.266.29-.174.537-.427.719-.734h.681a2.1 2.1 0 0 0 .719.734c.289.175.612.266.94.266.329 0 .652-.091.942-.266.29-.174.536-.427.718-.734h.681c.183.307.43.56.719.734.29.174.613.266.941.266a1.819 1.819 0 0 0 1.06-.351M6 12a1.766 1.766 0 0 1-1.163-.476M5 12v7a1 1 0 0 0 1 1h2v-5h3v5h7a1 1 0 0 0 1-1v-7m-5 3v2h2v-2h-2Z" />
+          </svg>
+          <span class="ml-3">Mercado</span>
+        </a>
+      </li>
+      <li>
+        <a href="aboutus.html"
+          class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+          <svg class="w-6 h-6 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+              d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+          </svg>
+          <span class="ml-3">Sobre Nós</span>
+        </a>
+      </li>
+
+      <!-- Colocando o Logout no final -->
+      <li class="mt-auto">
+        <a href="login.html" onclick="localStorage.clear()"
+          class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
+          <svg class="w-6 h-6 text-green-800 transition duration-75 group-hover:text-gray-900" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12">
+            </path>
+          </svg>
+          <span class="ml-3">Logout</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <body class="bg-gray-100">
+    <!-- Seção de Vendendo -->
+    <section class="my-16">
+      <h2 class="text-3xl font-semibold text-center mb-6">Vendendo</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <!-- Card 1 - Algodão -->
+        <div
+          class="max-w-xs w-full p-4 border border-gray-200 rounded-lg shadow-lg flex-1 bg-white hover:shadow-2xl transition-shadow">
+          <img src="../images/algodao01.jpg" alt="Algodão" class="h-64 w-full object-cover mb-4 rounded-lg">
+          <div class="text-center">
+            <p class="font-bold">Algodão</p>
+            <p>Safra: 150 Kg</p>
+            <p>Local: Moçambique</p>
+            <p>Contato: fazendeiro@example.com</p>
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center mt-4"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 - Batata -->
+        <div
+          class="max-w-xs w-full p-4 border border-gray-200 rounded-lg shadow-lg flex-1 bg-white hover:shadow-2xl transition-shadow">
+          <img src="../images/batata 01.jpg" alt="Batata" class="h-64 w-full object-cover mb-4 rounded-lg">
+          <div class="text-center">
+            <p class="font-bold">Batata Inglesa</p>
+            <p>Safra: 1 Tonelada</p>
+            <p>Local: Brasil</p>
+            <p>Contato: fazendeiro@example.com</p>
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center mt-4"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 - Café -->
+        <div
+          class="max-w-xs w-full p-4 border border-gray-200 rounded-lg shadow-lg flex-1 bg-white hover:shadow-2xl transition-shadow">
+          <img src="../images/café 01.jpg" alt="Café" class="h-64 w-full object-cover mb-4 rounded-lg">
+          <div class="text-center">
+            <p class="font-bold">Café</p>
+            <p>Safra: 300 Kg</p>
+            <p>Local: Brasil</p>
+            <p>Contato: fazendeiro@example.com</p>
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center mt-4"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
+        </div>
+
+        <!-- Adicionar Anúncio de Venda -->
+        <div
+          class="max-w-xs w-full p-4 border border-gray-200 rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow flex-1 bg-white">
+          <div class="flex items-center justify-center h-64 mb-4 bg-gray-300 rounded-lg">
+            <!-- SVG de "Adicionar" -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-10 h-10 text-gray-400">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
             </svg>
-            <span class="sr-only">Close menu</span>
-        </button>
-
-        <!-- Menu Items -->
-        <ul class="space-y-2 mt-4">
-            <li>
-                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
-                    <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path>
-                    </svg>
-                    <span class="ml-3">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
-                    <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 4v16m8-8H4"></path>
-                    </svg>
-                    <span class="ml-3">Add Item</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
-                    <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M8 12h8m-8 4h8m-8-8h8"></path>
-                    </svg>
-                    <span class="ml-3">Items</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100">
-                    <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
-                    </svg>
-                    <span class="ml-3">Logout</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <body class="bg-gray-100">
-<!-- Seção de Vendendo -->
-<section class="my-16">
-  <h2 class="text-3xl font-semibold text-center mb-6">Vendendo</h2>
-  <div class="flex flex-wrap justify-center gap-6">
-    <!-- Card 1 -->
-    <div role="status" class="max-w-sm py-4 border border-gray-200 rounded shadow animate-pulse md:p-6 ark:border-gray-700 flex-1">
-   
-    </div>
-    
-    <!-- Card 2 -->
-    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
-    </div>
-    
-    <!-- Card 3 -->
-    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
-    </div>
-    
-    <!-- Adicionar Anúncio de Venda -->
-    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow flex-1">
-      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
-        <!-- SVG de "Adicionar" -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-gray-400 dark:text-gray-500">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-        </svg>
+          </div>
+          <div class="text-center text-gray-500">Adicione seu anúncio de venda aqui</div>
+        </div>
       </div>
-      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-4 mx-auto"></div>
-      <div class="text-center text-gray-500">Adicione seu anúncio de venda aqui</div>
-    </div>
-  </div>
-</section>
-<!-- Seção de Comprando -->
-<section class="my-16">
-  <h2 class="text-3xl font-semibold text-center mb-6">Comprando</h2>
-  <div class="flex flex-wrap justify-center gap-6">
-    <!-- Card 1 -->
-    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
-    </div>
-    
-    <!-- Card 2 -->
-    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
-    </div>
-    
-    <!-- Card 3 -->
-    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 flex-1">
-      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"></div>
-      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 mx-auto sm:w-3/4 md:w-1/2"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mx-auto sm:w-3/4 md:w-1/2"></div>
-    </div>
-    
-    <!-- Adicionar Anúncio de Compra -->
-    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow flex-1">
-      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
-        <!-- SVG de "Adicionar" -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-gray-400 dark:text-gray-500">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-        </svg>
+    </section>
+    <!-- Seção de Comprando -->
+    <section class="my-16">
+      <h2 class="text-3xl font-semibold text-center mb-6">Comprando</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+
+        <!-- Card 1 - Comprando Milho -->
+        <div
+          class="w-full max-w-xs p-4 border border-gray-200 rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow">
+          <div class="text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Comprando Milho</h3>
+            <p class="text-gray-600">Local: Estados Unidos</p>
+            <p class="text-gray-600 email">comprador@example.com</p>
+          </div>
+          <div class="mt-4">
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 - Comprando Pimenta -->
+        <div
+          class="w-full max-w-xs p-4 border border-gray-200 rounded-lg shadow-lg bg-white hover:shadow-2xl transition-shadow">
+          <div class="text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Comprando Pimenta</h3>
+            <p class="text-gray-600">Local: Congo - África</p>
+            <p class="text-gray-600 email">comprador2@example.com</p>
+          </div>
+          <div class="mt-4">
+            <button class="w-full py-2 px-4 copy-btn rounded-lg transition-colors flex items-center justify-center"
+              onclick="copyEmail(this)">
+              <!-- Ícone de Copiar -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-7.5A2.25 2.25 0 003.75 5.25v12.75A2.25 2.25 0 006 20.25h7.5a2.25 2.25 0 002.25-2.25V15M9.75 15h9M15 12l3 3-3 3" />
+              </svg>
+              Copiar E-mail
+            </button>
+          </div>
+        </div>
+
+        <!-- Adicionar Anúncio de Compra -->
+        <div
+          class="w-full max-w-xs p-4 border border-gray-200 rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow bg-white">
+          <div class="flex items-center justify-center h-32 mb-4 bg-gray-300 rounded-lg">
+            <!-- SVG de "Adicionar" -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-8 h-8 text-gray-400">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </div>
+          <div class="text-center text-gray-500">Adicione seu anúncio de compra aqui</div>
+        </div>
+
       </div>
-      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mx-auto"></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-4 mx-auto"></div>
-      <div class="text-center text-gray-500">Adicione seu anúncio de compra aqui</div>
-    </div>
-  </div>
-</section>
+    </section>
+  </body>
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-</body>
 
-</html>
+  </script>
+  <script src="../javascript/emailcopy.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
