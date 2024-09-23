@@ -12,7 +12,7 @@ function renderMessage(role, message) {
     ` : `
         <img class="w-10 h-10 rounded-full mr-3" src="../images/tanica.jpg" alt="Tanica Image">
         <div class="bg-gray-300 text-gray-900 p-3 rounded-lg max-w-md">
-            <pre>${message}</pre>
+            <p>${message}</p>
         </div>
     `;
 
